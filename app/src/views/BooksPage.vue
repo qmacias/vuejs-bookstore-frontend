@@ -1,6 +1,9 @@
 <script>
+import SideMenu from "@/components/SideMenu.vue";
+
 export default {
   name: "BooksPage",
+  components: { SideMenu },
 };
 </script>
 
@@ -8,7 +11,7 @@ export default {
   <main>
     <section class="section">
       <div class="columns">
-        <h1>Esta es la página de Libros.</h1>
+        <SideMenu />
       </div>
     </section>
   </main>
