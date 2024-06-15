@@ -28,6 +28,7 @@ export default {
               <div class="is-flex is-align-items-center is-justify-content-center">
                 <p class="buttons">
                   <RouterLink to="/books" class="button is-primary">Ver todos los libros</RouterLink>
+                  <RouterLink to="/books?new=true" class="button">Agregar nuevo</RouterLink>
                 </p>
               </div>
             </div>
