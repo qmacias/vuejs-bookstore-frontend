@@ -22,10 +22,10 @@ export const useAuthorStore = defineStore('AuthorStore', {
             this.list.push(author);
         },
         getAuthor(id) {
-            return this.list.find(author => author.id === id);
+            return this.list.find((author) => author.id === id);
         },
         deleteAuthor(id) {
-            this.list = this.list.filter(author => author.id !== id);
+            this.list = this.list.filter((author) => author.id !== id);
         },
     },
 });

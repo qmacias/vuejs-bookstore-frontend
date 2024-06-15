@@ -27,6 +27,9 @@ export const useBookStore = defineStore('BookStore', {
         addBook(book) {
             this.list.push(book);
         },
+        getBook(id) {
+            return this.list.find((book) => book.id === id);
+        },
         deleteBook(id) {
             this.list = this.list.filter((book) => book.id !== id);
         },

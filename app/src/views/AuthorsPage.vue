@@ -1,5 +1,5 @@
 <script>
-import { useAuthorStore, useBookStore } from '@/stores';
+import { useAuthorStore, useBookStore, useImageStore } from '@/stores';
 
 import AuthorCard from "@/components/authors/AuthorCard.vue";
 import NewAuthorForm from "@/components/authors/NewAuthorForm.vue";
@@ -15,8 +15,9 @@ export default {
   setup() {
     const authorStore = useAuthorStore();
     const bookStore = useBookStore();
+    const imageStore = useImageStore();
 
-    return { authorStore, bookStore };
+    return { authorStore, bookStore, imageStore };
   },
   data: () => ({
     filterText: '',
@@ -45,9 +46,8 @@ export default {
     deleteAuthor(payload) {
       for (const book of this.bookStore.list) {
         if (book.authorId === payload.id) {
-          // Aquí tengo que eliminar libro con book.id
-          // Aquí tengo que eliminar imagen con book.imageId
-          // Para esto hay que usar la api de backend con Cloudinary
+          this.bookStore.deleteBook(book.id);
+          this.imageStore.deleteImage(book.imageId);
         }
       }
 
