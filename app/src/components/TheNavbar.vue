@@ -24,7 +24,7 @@ export default {
   <nav class="navbar has-shadow">
     <div class="navbar-brand">
       <RouterLink to="/" class="navbar-item">
-        <img src="@/assets/bookstore.png" alt="LOGO" width="40" />
+        <img src="@/assets/bookstore.png" alt="Logo de la biblioteca." width="40" />
       </RouterLink>
     </div>
 
