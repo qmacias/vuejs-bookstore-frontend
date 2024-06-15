@@ -19,5 +19,8 @@ watchEffect(() => {
 </template>
 
 <style>
-
+.box {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px -3px rgba(0,0,0,0.1);
+}
 </style>
